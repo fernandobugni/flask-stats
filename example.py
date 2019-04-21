@@ -10,7 +10,7 @@ app = Flask(__name__)
 Stats(app)
 
 @app.route('/')
-@time_decorator
+#@time_decorator
 def hello():
     a = 40
     sleep(10)

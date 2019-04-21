@@ -62,8 +62,11 @@ class Stats:
 
         @app.route('/stats')
         def stats():
-            logging.info(" *** %s" % self.__sqlite_repository.get_requests())
             return jsonify(self.get_stats())
+
+        @app.route('/endpoints_stats')
+        def endpoints_stats():
+            return jsonify({'duration': self.__sqlite_repository.get_requests()})
 
     def __config_info(self):
         config = dict(self.app.config)
