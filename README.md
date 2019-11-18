@@ -7,7 +7,7 @@ Status: **working progress**
 ## Instalation
 
 ```cmd
-pip install flask-stats
+pip install flask-api-stats
 ```
 
 ## A Simple Example

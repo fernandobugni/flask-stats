@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='flask-api-stats',
-    version='0.4',
+    version='0.5',
     author="Fernando Bugni",
     author_email="fernando.bugni@gmail.com",
     description="A plugin for flask to obtain API statistics",
