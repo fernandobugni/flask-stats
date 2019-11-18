@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
 Adding ```Stats(app)``` allows to register statistics of the API such as response time or configuration. 
 
-In any time, we can enter in ```/endpoint``` to see duration of each endpoint
+In any time, we can enter in ```/endpoints_stats``` to see duration of each endpoint
 ```
 {
     duration: [
@@ -76,3 +76,30 @@ gc_stats: {
 ## Contact
 Please if you have any doubt or found any bug report and issue or send an email to fernando.bugni(a)gmail.com
 
+<!---
+Comments how to update to pypi
+==============================
+Tutorial: https://packaging.python.org/tutorials/packaging-projects/
+
+Official: https://pypi.org/manage/projects/
+Test: https://test.pypi.org/manage/projects/
+
+** Upload package
+* python3 -m pip install --user --upgrade setuptools wheel
+* python3 setup.py sdist bdist_wheel
+    dist/
+        example_pkg_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
+        example_pkg_YOUR_USERNAME_HERE-0.0.1.tar.gz
+* python3 -m pip install --user --upgrade twine
+* python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+    Uploading distributions to https://test.pypi.org/legacy/
+    Enter your username: [your username]
+    Enter your password:
+    Uploading example_pkg_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
+    100%|█████████████████████| 4.65k/4.65k [00:01<00:00, 2.88kB/s]
+
+** Installing your newly uploaded package
+* Create a new venv
+* python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps example-pkg-YOUR-USERNAME-HERE
+
+-->
