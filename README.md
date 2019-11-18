@@ -102,4 +102,7 @@ Test: https://test.pypi.org/manage/projects/
 * Create a new venv
 * python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps example-pkg-YOUR-USERNAME-HERE
 
+** To Upload package for production 
+* python3 -m twine upload dist/*
+
 -->

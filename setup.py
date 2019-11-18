@@ -4,9 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='flask-stats',
-    version='0.2',
-    #scripts=['flask-stats'],
+    name='flask-api-stats',
+    version='0.4',
     author="Fernando Bugni",
     author_email="fernando.bugni@gmail.com",
     description="A plugin for flask to obtain API statistics",
