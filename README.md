@@ -13,12 +13,15 @@ pip install flask-api-stats
 ## A Simple Example
 
 ```Python
-from flask import Flask
+
 from time import sleep
-from flask_stats.flask_stats import Stats
+from flask import Flask
+from flask_stats import Stats
+
+s = Stats()
 
 app = Flask(__name__)
-Stats(app)
+s.init_app(app)
 
 @app.route('/')
 def hello():
