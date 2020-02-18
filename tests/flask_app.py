@@ -1,12 +1,13 @@
 from flask import Flask
 from time import sleep
-from flask_stats.flask_stats import Stats
+from flask_stats import Stats
 
 
 def create_app():
 
+    s = Stats()
     app = Flask(__name__)
-    Stats(app)
+    s.init_app(app)
 
     @app.route('/')
     def hello():

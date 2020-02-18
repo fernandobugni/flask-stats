@@ -1,7 +1,5 @@
 import unittest
-import urllib.request
 from tests.flask_app import create_app
-from ast import literal_eval
 import json
 
 

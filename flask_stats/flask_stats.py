@@ -14,7 +14,12 @@ from flask_stats.sqlite_repository import SqliteRepository
 
 class Stats:
 
-    def __init__(self, app: Flask = None):
+    def __init__(self):
+        self.app = None
+        self.__start_time_epoc = None
+        self.__sqlite_repository = None
+
+    def init_app(self, app: Flask = None):
         self.app = app
         self.__start_time_epoc = time.time()
         self.__sqlite_repository = SqliteRepository()
@@ -67,6 +72,7 @@ class Stats:
         @app.route('/endpoints_stats')
         def endpoints_stats():
             return jsonify({'duration': self.__sqlite_repository.get_requests()})
+
 
     def __config_info(self):
         config = dict(self.app.config)
